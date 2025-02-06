@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft: block/cube_all",
+  "textures": {
+    "all": "varicraft:block/minerio_de_safira"
+  }
+}
