@@ -1,6 +1,7 @@
 package net.vari.varicraft.block;
 
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -20,10 +21,10 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, VariCraft.MOD_ID);
 
     public static final RegistryObject<Block> BLOCO_DE_SAFIRA = registerBlock("bloco_de_safira",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> MINERIO_DE_SAFIRA = registerBlock("minerio_de_safira",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4f).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
